@@ -27,3 +27,19 @@ def solution(s, p):
 
 
 print(solution("leetcode", "*ee"))
+"""
+    substrings = p.split('*')
+    index = 0
+    
+    for i, sub in enumerate(substrings):
+        if not sub:
+            continue
+        
+        pos = s.find(sub, index)
+        if pos == -1:
+            return False
+        
+        index = pos + len(sub)  # move past this substring
+    
+    return True
+"""
