@@ -18,10 +18,15 @@ print(solution("anagram", "nagaram"))
 
 """ .count()
 if len(s) != len(t):
-            return False
-        for i in set(s):
-            if s.count(i) != t.count(i):
-                return False
-        else:
-            return True
+  return False
+for i in set(s):
+  if s.count(i) != t.count(i):
+      return False
+else:
+  return True
+"""
+""" for small numbers it is fine but if the string number increases than it is slow
+if len(s) != len(t):
+  return False
+return sorted(s) == sorted(t)
 """
